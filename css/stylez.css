@@ -1,0 +1,182 @@
+/********* colors ********/
+/********* typography ********/
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #003e54;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 0 0 0.4em 0; }
+
+p {
+  color: #575553;
+  font-size: 1em;
+  line-height: 1.4;
+  margin: 0 0 1.25em 0; }
+
+strong {
+  color: #1a1918; }
+
+h1 {
+  font-size: 2.375em; }
+
+h2 {
+  font-size: 1.875em; }
+
+h3 {
+  font-size: 1.375em; }
+
+h4 {
+  font-size: 1.125em;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+
+h5 {
+  font-size: 1.125em; }
+
+h6 {
+  font-size: 1em; }
+  
+a {
+  color: #2d9eb2;
+}
+a:hover, a: focus{
+  color: #207180;
+}
+
+/********* layout ********/
+.wrapper {
+  max-width: 900px;
+  width: 90%;
+  margin: auto; }
+
+.section {
+  padding: 2em 0; }
+
+.grey-box {
+  background-color: #f0f0f0;
+  padding: 1em;
+  margin-bottom: 2em; }
+
+.col1,
+.col2 {
+  display: inline-block;
+  width: 48%; }
+  @media screen and (max-width: 800px) {
+    .col1,
+    .col2 {
+      width: 100%; } }
+
+.col2 {
+  float: right; }
+
+/********* header ********/
+#header {
+  background-color: #003e54;
+  text-align: center;
+  padding: 2em 0; }
+  #header h1 {
+    color: white;
+    margin-bottom: 0; }
+  #header img {
+    margin-bottom: 0.4em; }
+
+/********* forms ********/
+label {
+  font-size: 1em;
+  font-weight: bold;
+  color: #003e54;
+  margin-bottom: 0.25em; }
+  @media screen and (max-width: 800px) {
+    label {
+      display: block; } }
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+  background-color: #fff;
+  font-family: sans-serif;
+  border: 2px solid #e6e6e6;
+  box-shadow: none;
+  color: #575553;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  height: 2.4375em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear; }
+  @media screen and (max-width: 800px) {
+    input {
+      width: 100%; } }
+  input:focus {
+    border-color: #2d9eb2;
+    outline: none; }
+
+.field {
+  display: inline-block; }
+  @media screen and (max-width: 800px) {
+    .field {
+      display: block; } }
+
+.intro .field {
+  width: 32%; }
+  @media screen and (max-width: 800px) {
+    .intro .field {
+      width: 100%; } }
+
+input.button {
+  border-color: transparent;
+  background-color: #2d9eb2;
+  color: white;
+  border-radius: 3px;
+  font-size: 14px; }
+  input.button:hover, input.button:active, input.button:focus {
+    background-color: #268899;
+    cursor: pointer; }
+
+button {
+  background-color: #2d9eb2;
+  color: white;
+  border-radius: 3px;
+  font-size: 12px;
+  border: none; }
+  button:hover, button:active, button:focus {
+    background-color: #268899;
+    cursor: pointer; }
+
+form {
+  margin-bottom: 0.25em; }
+  form label {
+    display: block; }
+  form input {
+    max-width: 160px;
+    margin-right: 0.5em; }
+    @media screen and (max-width: 800px) {
+      form input {
+        max-width: 100%; } }
+  form input.button {
+    margin-right: 0; }
+
+/********* tables ********/
+table {
+  text-align: left;
+  border-collapse: collapse;
+  font-size: 0.875em;
+  width: 100%; }
+  table tr {
+    border-bottom: 1px solid #c7c6c5; }
+  table th, table td {
+    width: 33%;
+    padding: 0.5em 0; }
+  table span.incomplete {
+    color: #e64051; }
+  table span.complete {
+    color: #669431; }

@@ -1,0 +1,175 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+  <title>Create your Devpost team page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/stylez.css">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<div id="header">
+  <div class="wrapper">
+    <img src="img/devpost-reversed-rgb.svg" width="175" alt="Devpost" />
+    <h1>Create your team page</h1>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="section intro">
+    <p>Thanks so much for joining the team pages alpha! <a href="http://www.devpost.com/teams">The goal of team pages is to give job seekers an inside look at your dev team before they apply</a>. We believe that'll lead to better interviews and hires.</p>
+
+    <p>In order to create your team page, we need to get some information from your team. This page will help you tell your team what info you need from them and monitor their responses.</p>
+
+    <h3>OK, let's get started</h3>
+
+    <div class="grey-box">
+      <p>We'll use this information to email your team members a survey they can fill out which will help us build your team page. Surveys are short and role specific.</p>
+      
+      <div class="field">
+        <label for="name">Name</label> <input id="fromName" required placeholder="Bob Slydell" name="name"></input> 
+      </div>
+      
+      <div class="field">
+        <label for="email">Email</label> <input id="fromEmail" required placeholder="bslydell@initech.biz" name="email"></input>
+      </div>
+      
+      <div class="field">  
+        <label for="team">Company</label> <input id="teamName" required placeholder="Initech" name="team"></input>
+      </div>
+    </div>
+
+    <p>Track survey completion below and send reminder emails if neccesary. To recheck the status of all your forms, click this button: <button id="checkStatus">Check form status</button></p>
+
+  </div>
+</div>
+
+<div class="wrapper">
+
+  <div class="col1">
+
+    <div class="company-box">
+      <div class="grey-box">
+        <h3>Company info</h3>
+        <p>Who can tell us about your company's size, mission, benefits, open jobs, etc? You only need to send this to <strong>one person</strong>&mdash;this could be you, your CEO, or someone in HR.</p>
+        <form id="hrForm">
+          <div class="field"> 
+            <label for="hrName">Name</label> <input id="hrName" name="hrName" required type="text" placeholder="Bill Lumberg"></input>
+          </div>
+          <div class="field"> 
+            <label for="hrEmail">Email</label> <input id="hrEmail" name="hrEmail" required type="email" placeholder="bill@initech.biz"></input>
+          </div>
+          <input type="submit" id="hrSend" value="Send" class="button"></input>
+        </form>
+        <div class="sentList" id="hrList"></div>
+      </div>
+    </div>
+
+    <div class="dev-team">
+      <div class="grey-box">
+        <h3>Dev team members</h3>
+        <p>Please send this form to <strong>at least four members</strong> of your dev team. That includes Engineering, QA, DevOps, and Data Science and roles. Don't forget to include your CTO / tech lead. Your developer's answers are the heart &amp; soul of your team page.</p>
+        <form id="devForm">
+          <div class="field"> 
+            <label for="devName">Name</label> <input id="devName" name="devName" required type="text" placeholder="Michael Bolton"></input>
+          </div>
+          <div class="field">
+            <label for="devEmail">Email</label> <input id="devEmail" name="devEmail" required type="email" placeholder="michael.bolton@initech.biz"></input>
+          </div>
+          <input type="submit" id="devSend" value="Send" class="button"></input>
+        </form>
+        <div class="sentList" id="devList"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col2">
+
+    <div class="tech-box">
+      <div class="grey-box">
+        <h3>Tech info</h3>
+        <p>Who can tell us about your tech stack and development process? You only need to send this to <strong>one person</strong>&mdash;we suggest your CTO or a tech lead/manager.</p>
+        <form id="techForm">
+          <div class="field"> 
+            <label for="techName">Name</label> <input id="techName" name="techName" required type="text" placeholder="Peter Gibbons"></input>
+          </div>
+          <div class="field">
+            <label for="techEmail">Email</label> <input id="techEmail" name="techEmail" required type="email" placeholder="pgibbons@initech.biz"></input>
+          </div>
+          <input type="submit" id="techSend" value="Send" class="button"></input>
+        </form>
+        <div class="sentList" id="techList"></div>
+      </div>
+    </div>
+
+    <div class="other-members">
+      <div class="grey-box">
+        <h3>Other team members</h3>
+        <p>Please send this form to a few members of your team who work with the dev team, but aren't on it&mdash;roles like Product, Design, Marketing, etc. This area helps candidates understand how they fit into the bigger picture.</p>
+        <form id="ndevForm">
+          <div class="field"> 
+            <label for="ndevName">Name</label> <input id="ndevName" name="ndevName" required type="text" placeholder="Milton Waddams"></input>
+          </div>
+          <div class="field"> 
+            <label for="ndevEmail">Email</label> <input id="ndevEmail" name="ndevEmail" required type="email" placeholder="mwaddams@initech.biz"></input>
+          </div>  
+          <input type="submit" id="ndevSend" value="Send" class="button"></input>
+        </form>
+        <div class="sentList" id="ndevList"></div>
+      </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+  <!-- JaVAVAVAVAVaScript-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="//cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+  <script type='text/javascript' src='js/mustache.min.js'></script>
+  <script src="js/localforage.min.js"></script>
+  <script id="sentListTemplate" type="x-tmpl-mustache">
+    <p>You already asked:</p>
+    <table>
+      <thead>
+        <tr>
+          <th class="name">Name</th>
+          <th class="date">Last contacted</th>
+          <th class="status">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+    {{#data}}
+      <tr>
+        <td class="name">{{name}}</td>
+        <td class="date">{{date}}</td>
+        <td class="status">
+          {{#complete}}
+            <span class="complete">complete</span>
+          {{/complete}}
+
+          {{^complete}}
+            <span class="incomplete">incomplete</span>
+            <button onclick="sendReminder('{{key}}', '{{name}}', '{{email}}', '{{category}}', '{{company}}')">Resend</button>
+          {{/complete}}
+        </td>
+      </tr>
+    {{/data}}
+    </tbody>
+    </table>
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

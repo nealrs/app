@@ -1,0 +1,247 @@
+/********* colors ********/
+
+$grey-1: #f0f0f0;
+$grey-2: #e6e6e6;
+$grey-3: #c7c6c5;
+$grey-4: #999794;
+$grey-5: #575553;
+$grey-6: #1a1918;
+
+$dark: #003e54;
+
+$primary-1: #2d9eb2;
+$primary-2: #207180;
+$primary-3: #268899;
+$primary-4: #1a5b66;
+$primary-5: #baeef7;
+$primary-6: #55dbf2;
+
+$secondary-1: #77ad39;
+$secondary-2: #547a28;
+$secondary-3: #669431;
+$secondary-4: #436120;
+$secondary-5: #daf7ba;
+
+$error-1: #e64051;
+$error-2: #801c26;
+$error-3: #ffcfd3;
+
+$highlight-1: #ffc247;
+$highlight-2: #fff1d6;
+
+
+/********* typography ********/
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $dark;
+	font-weight: bold;
+	line-height: 1.4;
+	margin: 0 0 0.4em 0;
+}
+
+p {
+	color: $grey-5;
+	font-size: 1em;
+	line-height: 1.4;
+	margin: 0 0 1.25em 0;
+}
+
+strong {
+	color: $grey-6;
+}
+
+h1 { font-size: 2.375em; }
+h2 { font-size: 1.875em; }
+h3 { font-size: 1.375em; }
+h4 { font-size: 1.125em; letter-spacing: 1px; text-transform: uppercase; }
+h5 { font-size: 1.125em; }
+h6 { font-size: 1em; }
+
+/********* layout ********/
+
+.wrapper {
+	max-width: 900px;
+	width: 90%;
+	margin: auto;
+}
+
+.section {
+	padding: 2em 0;
+}
+
+.grey-box {
+	background-color: $grey-1;
+	padding: 1em;
+	margin-bottom: 2em;
+}
+
+.col1,
+.col2 {
+	display: inline-block;
+	width: 48%;
+
+	@media screen and (max-width: 800px) {
+		width: 100%;
+	}
+}
+
+.col2 {
+	float: right;
+}
+
+/********* header ********/
+
+#header {
+	background-color: $dark;
+	text-align: center;
+	padding: 2em 0;
+
+	h1 {
+		color: white;
+		margin-bottom: 0;
+	}
+
+	img { margin-bottom: 0.4em; }
+	
+}
+
+/********* forms ********/
+
+label {
+	font-size: 1em;
+	font-weight: bold;
+	color: $dark;
+	margin-bottom: 0.25em;
+
+	@media screen and (max-width: 800px) {
+		display: block;
+	}
+}
+
+input {
+  -webkit-appearance: none;
+	border-radius: 0;
+	background-color: #fff;
+	font-family: sans-serif;
+	border: 2px solid $grey-2;
+	box-shadow: none;
+	color: $grey-5;
+	display: inline-block;
+	font-size: 1em;
+	margin: 0 0 1em 0;
+	padding: 0.5em;
+	height: 2.4375em;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+
+	@media screen and (max-width: 800px) {
+		width: 100%;
+	}
+
+	&:focus {
+		border-color: $primary-1;
+		outline: none;
+	}
+}
+
+.field {
+	display: inline-block;
+
+	@media screen and (max-width: 800px) {
+		display: block;
+	}
+}
+
+.intro .field {
+	width: 32%;
+
+	@media screen and (max-width: 800px) {
+		width: 100%;
+	}
+}
+
+input.button {
+	border-color: transparent;
+	background-color: $primary-1;
+	color: white;
+	border-radius: 3px;
+	font-size: 14px;
+
+	&:hover, &:active, &:focus {
+		background-color: $primary-3;
+		cursor: pointer;
+	}
+}
+
+button {
+	background-color: $primary-1;
+	color: white;
+	border-radius: 3px;
+	font-size: 12px;
+	border: none;
+
+	&:hover, &:active, &:focus {
+		background-color: $primary-3;
+		cursor: pointer;
+	}
+}
+
+form {
+
+	margin-bottom: 0.25em;
+
+	label {
+		display: block;
+	}
+
+	input {
+		max-width: 160px;
+		margin-right: 0.5em;
+
+		@media screen and (max-width: 800px) {
+			max-width: 100%;
+		}
+	}
+
+	input.button {
+		margin-right: 0;
+	}
+}
+
+/********* tables ********/
+
+table {
+
+	text-align: left;
+  border-collapse: collapse;
+  font-size: 0.875em;
+  width: 100%;
+
+	tr {
+		border-bottom: 1px solid $grey-3;
+	}
+
+	th, td {
+		width: 33%;
+		padding: 0.5em 0;
+	}
+
+	span.incomplete {
+		color: $error-1;
+	}
+
+	span.complete {
+		color: $secondary-3;
+	}
+
+}
